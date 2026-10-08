@@ -1,12 +1,34 @@
-username = input("Please enter your name: ")
+import os
+from dotenv import load_dotenv
 
-from tasks import userTasks
+adminMode = input("Are you an admin? (y/n): ")
 
-print(f"Welcome {username}!")
+load_dotenv()
+ADMINPASSWORD = os.getenv("TASKMANAGERADMINPASSWORD")
 
-print("\n================ Your Tasks ================\n")
+if adminMode.lower() == "y":
+    authentication = input("Enter the password: ")
+    if authentication == ADMINPASSWORD:
+        print("Admin mode activated.")
+    else:
+        print("Access denied. password is incorrect.")
+    
+elif adminMode.lower() == "n":
+    username = input("Please enter your name: ")
 
-for task in userTasks:
-    print(f"- Name: {task["name"].title()}\n- Status: {task["status"].title()}\n- Description: {task["description"]}")
-    if task != userTasks[-1]:
-        print("\n---\n")
+    from tasks import userTasks
+
+    print(f"Welcome {username}!")
+
+    print("\n================ Your Tasks ================\n")
+
+
+    for task in userTasks:
+        print(f"- Name: {task["name"].title()}\n- Status: {task["status"].title()}\n- Description: {task["description"]}")
+        if task != userTasks[-1]:
+            print("\n---\n")
+
+    with open(r"C:\Users\DELL\Documents\Programming - Projects\Python - Projects\Practices\personal_task_manager\tasks.txt", "a") as file:
+        for task in userTasks:
+            file.write(f"- Name: {task["name"].title()}\n- Status: {task["status"].title()}\n- Description: {task["description"]}")
+            file.write("\n---\n")
