@@ -16,9 +16,9 @@ if adminMode.lower() == "y":
 elif adminMode.lower() == "n":
     username = input("Please enter your name: ")
 
-    from tasks import userTasks
-
     print(f"Welcome {username}!")
+
+    from tasks import userTasks
 
     print("\n================ Your Tasks ================\n")
 
