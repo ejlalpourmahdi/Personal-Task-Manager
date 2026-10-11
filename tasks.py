@@ -1,10 +1,12 @@
 userTasks = []
+PRIORITY = ["low", "medium", "high"]
 
 while True:
     print("\n================ New Task ================\n")
 
     taskName = input("Name: ")
     taskStatus = input("Status: ")
+    taskPriority = input("Priority (Low/Medium/High): ")
     taskDescription = input("Description (optional): ")
 
     print("\n==========================================\n")
@@ -15,6 +17,9 @@ while True:
     elif taskStatus.strip() == "":
         print("Error! Task status can't be empty.\n")
         continue
+    elif taskPriority.lower() not in PRIORITY:
+        print("Error! An invalid priority.\n")
+        continue
     else:
         if taskDescription == "":
             taskDescription = None
@@ -22,6 +27,7 @@ while True:
         task = {
             "name": taskName,
             "status": taskStatus,
+            "priority": taskPriority,
             "description": taskDescription
         }
 
