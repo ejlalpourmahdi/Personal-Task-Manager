@@ -4,7 +4,6 @@
 
 A command-line task manager built with Python for organizing personal tasks. It is designed as a practical Git and GitHub project, with persistent task storage, task status management, priorities, and a password-protected admin mode.
 
-> **Project note:** This README follows the project specification. Replace the example output and add real screenshots/GIFs from your own program before submitting the repository. Keep the documented file structure synchronized with the files that actually exist in your repository.
 
 ## Table of Contents
 
@@ -21,7 +20,7 @@ A command-line task manager built with Python for organizing personal tasks. It 
   - [Example Output](#example-output)
   - [Screenshots](#screenshots)
     - [Application start](#application-start)
-    - [Task list](#task-list)
+    - [Task History](#task-history)
   - [Demo](#demo)
   - [Roadmap](#roadmap)
   - [Contributing](#contributing)
@@ -163,6 +162,7 @@ The following is **illustrative output**, not a captured screenshot. Exact wordi
 ```text
 Are you an admin? (y/n): n
 Please enter your name: Mahdi
+Welcome Mahdi!
 
 ================ New Task ================
 
@@ -176,7 +176,6 @@ Success!
 
 
 Do you want to add a new task? (y/n): n
-Welcome Mahdi!
 
 ================ Your Tasks ================
 
@@ -193,9 +192,9 @@ Some picture of application run
 
 ![Application start](pictures/start.png)
 
-### Task list
+### Task History
 
-![Task list](pictures/tasks-history.png)
+![Task History](pictures/tasks-history.png)
 
 ## Demo
 
