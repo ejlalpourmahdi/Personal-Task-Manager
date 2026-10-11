@@ -6,7 +6,7 @@ while True:
 
     taskName = input("Name: ")
     taskStatus = input("Status: ")
-    taskPriority = input("Priority (Low/Medium/High): ")
+    taskPriority = input("Priority (Low/Medium/High/Emergency): ")
     taskDescription = input("Description (optional): ")
 
     print("\n==========================================\n")

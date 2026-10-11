@@ -44,7 +44,7 @@ This repository is also a hands-on exercise in using Git and GitHub, including m
 - Mark a task as completed.
 - Delete a task.
 - Save tasks locally so they persist between program runs.
-- Assign a priority to a task: `low`, `medium`, or `high`.
+- Assign a priority to a task: `low`, `medium`, `high` or `emergency`.
 - Provide a password-protected admin mode.
 
 ## Project Structure
@@ -53,11 +53,11 @@ The following is the intended final structure. The screenshots and demo GIF shou
 
 ```text
 personal_task_manager/
+├── gifs/
+│   └── demo.gif
 ├── pictures/
 │   ├── start.png
 │   └── tasks-hostory.png
-├── gifs/
-│   └── demo.gif
 ├── main.py
 ├── tasks.py
 ├── requirements.txt
@@ -166,8 +166,9 @@ Welcome Mahdi!
 
 ================ New Task ================
 
-Name: Programming Practices 
-Status: Done
+Name: programming practices 
+Status: done
+Priority (Low/Medium/High/Emergency): medium
 Description (optional): Practices of the group meetings 
 
 ==========================================
@@ -181,6 +182,7 @@ Do you want to add a new task? (y/n): n
 
 - Name: Programming Practices
 - Status: Done
+- Priority: Medium
 - Description: Practices of the group meetings
 ```
 
@@ -209,7 +211,7 @@ A short GIF of a real application run
 - [x] Store tasks locally between runs.
 - [x] Add task priorities (`low`, `medium`, `high`).
 - [x] Add a simple admin mode using a password from `.env`.
-- [x] Support task completion and deletion.
+- [] Support task completion and deletion.
 - [ ] Add due dates for tasks.
 - [ ] Implement task search and filtering by title, status, and priority.
 - [ ] Display task statistics and completion progress.
