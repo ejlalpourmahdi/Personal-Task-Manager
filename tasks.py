@@ -1,5 +1,5 @@
 userTasks = []
-PRIORITY = ["low", "medium", "high"]
+PRIORITY = ["low", "medium", "high", "emergency"]
 
 while True:
     print("\n================ New Task ================\n")
